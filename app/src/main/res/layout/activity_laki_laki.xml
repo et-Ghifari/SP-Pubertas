@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LakiLakiActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="40pt"
+            android:background="@color/lightGrey">
+
+            <Button
+                android:id="@+id/btn_kembali"
+                android:layout_width="20pt"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginVertical="10pt"
+                android:layout_marginLeft="10pt"
+                android:background="@color/hilang"
+                android:foreground="@drawable/ic_baseline_arrow_circle_left"
+                android:foregroundTint="#888888" />
+
+            <TextView
+                android:id="@+id/tv_judul"
+                android:layout_width="100pt"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="GEJALA"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="10pt" />
+
+            <ImageView
+                android:layout_width="20pt"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginVertical="10pt"
+                android:layout_marginRight="10pt"
+                android:background="@drawable/bg_menu"
+                android:foreground="@drawable/laki_laki"
+                android:elevation="2pt"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_gejala"
+            android:layout_width="match_parent"
+            android:layout_height="30pt"
+            android:layout_below="@id/rl_top"
+            android:layout_marginStart="10pt"
+            android:layout_marginTop="10pt"
+            android:layout_marginEnd="10pt"
+            android:layout_marginBottom="10pt"
+            android:background="@drawable/bg_biodata"
+            android:backgroundTint="@color/l"
+            android:padding="3pt">
+
+            <TextView
+                android:id="@+id/tv_nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1pt"
+                android:hint="Nama Lengkap"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="10pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_jk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="1pt"
+                android:hint="Jenis Kelamin"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="6pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_usia"
+                android:layout_width="18pt"
+                android:layout_height="18pt"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2pt"
+                android:background="@drawable/bg_menu"
+                android:gravity="center"
+                android:hint="00"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="10pt"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_below="@id/rl_gejala"
+            android:id="@+id/tv_gejala1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Gejala"
+            android:layout_centerHorizontal="true"
+            android:textSize="10pt"/>
+
+        <LinearLayout
+            android:layout_below="@id/tv_gejala1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingVertical="10pt"
+            android:layout_marginBottom="30pt">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_gejala"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_lanjut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10pt"
+            android:layout_marginBottom="10pt"
+            android:text="LANJUT"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/hijau"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

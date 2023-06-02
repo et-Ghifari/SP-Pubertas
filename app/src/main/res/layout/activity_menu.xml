@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:background="@color/lightGrey">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30pt"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="6pt">
+
+                <ImageView
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:padding="5pt"
+                    android:src="@drawable/logo_bar" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/listDivider"
+                    android:layout_marginVertical="5pt"/>
+
+                <TextView
+                    android:id="@+id/tv_judul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PUBERTAS SEHAT"
+                    android:textColor="@color/black"
+                    android:padding="5pt"
+                    android:textSize="12pt"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_puber"
+            android:layout_width="wrap_content"
+            android:layout_height="80pt"
+            android:layout_marginTop="40pt"
+            app:cardCornerRadius="10pt"
+            android:layout_marginHorizontal="10pt">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/puber"/>
+
+        </android.support.v7.widget.CardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/cv_puber"
+            android:layout_marginBottom="25pt">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/dividertop"
+                    android:layout_width="match_parent"
+                    android:layout_height="1pt"
+                    android:layout_marginHorizontal="10pt"
+                    android:layout_marginVertical="10pt"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/tv_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dividertop"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif"
+                    android:text="Pilihan Layanan"
+                    android:textColor="@color/black"
+                    android:textSize="8pt" />
+
+                <GridLayout
+                    android:id="@+id/gl_menu"
+                    android:layout_below="@id/tv_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5pt"
+                    android:layout_marginTop="5pt"
+                    android:columnCount="3"
+                    android:rowCount="2">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_rowWeight="1"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_margin="4pt"
+                        android:elevation="2pt"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="6pt">
+
+                        <Button
+                            android:id="@+id/btn_screening"
+                            android:layout_width="30pt"
+                            android:layout_height="30pt"
+                            android:layout_marginTop="2pt"
+                            android:background="@drawable/bg_menu"
+                            android:foreground="@drawable/screening"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="15pt"
+                            android:layout_marginVertical="3pt"
+                            android:gravity="center"
+                            android:text="Screening"
+                            android:textAlignment="center"
+                            android:textSize="7pt"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_rowWeight="1"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_margin="4pt"
+                        android:elevation="2pt"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="6pt">
+
+                        <Button
+                            android:id="@+id/btn_panduan"
+                            android:layout_width="30pt"
+                            android:layout_height="30pt"
+                            android:layout_marginTop="2pt"
+                            android:background="@drawable/bg_menu"
+                            android:foreground="@drawable/panduan"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="15pt"
+                            android:layout_marginVertical="3pt"
+                            android:gravity="center"
+                            android:text="Panduan"
+                            android:textAlignment="center"
+                            android:textSize="7pt"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_rowWeight="1"
+                        android:layout_column="2"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_margin="4pt"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="6pt">
+
+                        <Button
+                            android:id="@+id/btn_tentang"
+                            android:layout_width="30pt"
+                            android:layout_height="30pt"
+                            android:layout_marginTop="2pt"
+                            android:background="@drawable/bg_menu"
+                            android:foreground="@drawable/tentang"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="15pt"
+                            android:layout_marginVertical="3pt"
+                            android:gravity="center"
+                            android:text="Tentang"
+                            android:textAlignment="center"
+                            android:textSize="7pt"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_rowWeight="1"
+                        android:layout_column="0"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_margin="4pt"
+                        android:elevation="2pt"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="6pt">
+
+                        <Button
+                            android:id="@+id/btn_video"
+                            android:layout_width="30pt"
+                            android:layout_height="30pt"
+                            android:layout_marginTop="2pt"
+                            android:background="@drawable/bg_menu"
+                            android:foreground="@drawable/video"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="15pt"
+                            android:layout_marginVertical="3pt"
+                            android:gravity="center"
+                            android:text="Video"
+                            android:textAlignment="center"
+                            android:textSize="7pt"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_rowWeight="1"
+                        android:layout_column="1"
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_margin="4pt"
+                        android:elevation="2pt"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="6pt">
+
+                        <Button
+                            android:id="@+id/btn_admin"
+                            android:layout_width="30pt"
+                            android:layout_height="30pt"
+                            android:layout_marginTop="2pt"
+                            android:background="@drawable/bg_menu"
+                            android:foreground="@drawable/admin"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="15pt"
+                            android:layout_marginVertical="3pt"
+                            android:gravity="center"
+                            android:text="Admin"
+                            android:textAlignment="center"
+                            android:textSize="7pt"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif"/>
+
+                    </LinearLayout>
+
+                </GridLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

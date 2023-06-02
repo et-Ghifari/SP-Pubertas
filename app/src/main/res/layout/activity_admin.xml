@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="40pt"
+            android:background="@color/lightGrey">
+
+            <Button
+                android:id="@+id/btn_kembali"
+                android:layout_width="20pt"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginVertical="10pt"
+                android:layout_marginLeft="10pt"
+                android:background="@color/hilang"
+                android:foreground="@drawable/ic_baseline_arrow_circle_left"
+                android:foregroundTint="#888888" />
+
+            <TextView
+                android:id="@+id/tv_judul"
+                android:layout_width="100pt"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="ADMIN"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="10pt" />
+
+            <ImageView
+                android:layout_width="20pt"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginVertical="10pt"
+                android:layout_marginRight="10pt"
+                android:background="@drawable/bg_menu"
+                android:foreground="@drawable/admin"
+                android:elevation="2pt"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_admin"
+            android:layout_below="@id/rl_top"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:src="@drawable/ic_baseline_person"
+            android:padding="5pt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30pt"
+            android:background="@drawable/bg_menu"
+            android:backgroundTint="@color/l"/>
+
+        <LinearLayout
+            android:id="@+id/ll_admin"
+            android:layout_below="@id/iv_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10pt"
+            android:layout_marginHorizontal="10pt">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                android:text="Username"
+                android:textSize="8pt"/>
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="20pt"
+                android:layout_marginTop="3pt"
+                android:background="@drawable/bg_solid_5"
+                android:backgroundTint="@color/lightGrey"
+                android:drawableStart="@drawable/ic_baseline_person"
+                android:drawableTint="@color/textDescription"
+                android:drawablePadding="4pt"
+                android:hint="username..."
+                android:textColorHint="@color/textDescription"
+                android:padding="5pt"
+                android:textSize="8pt"
+                android:textColor="@color/textDescription"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5pt"
+                android:text="Password"
+                android:textSize="8pt"/>
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="20pt"
+                android:layout_marginTop="3pt"
+                android:background="@drawable/bg_solid_5"
+                android:backgroundTint="@color/lightGrey"
+                android:drawableStart="@drawable/ic_baseline_lock"
+                android:drawableTint="@color/textDescription"
+                android:drawablePadding="4pt"
+                android:textColorHint="@color/textDescription"
+                android:hint="password..."
+                android:padding="5pt"
+                android:textSize="8pt"
+                android:textColor="@color/textDescription"
+                android:inputType="textPassword"
+                android:singleLine="true"/>
+
+            <Button
+                android:id="@+id/btn_masuk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25pt"
+                android:backgroundTint="@color/l"
+                android:text="MASUK"
+                android:textColor="@color/white"
+                android:textSize="8pt"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
