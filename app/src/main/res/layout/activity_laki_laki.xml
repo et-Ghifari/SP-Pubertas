@@ -13,7 +13,7 @@
         <RelativeLayout
             android:id="@+id/rl_top"
             android:layout_width="match_parent"
-            android:layout_height="40pt"
+            android:layout_height="30pt"
             android:background="@color/lightGrey">
 
             <Button
@@ -21,7 +21,7 @@
                 android:layout_width="20pt"
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
-                android:layout_marginVertical="10pt"
+                android:layout_marginVertical="5pt"
                 android:layout_marginLeft="10pt"
                 android:background="@color/hilang"
                 android:foreground="@drawable/ic_baseline_arrow_circle_left"
@@ -43,10 +43,10 @@
                 android:layout_width="20pt"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
-                android:layout_marginVertical="10pt"
+                android:layout_marginVertical="5pt"
                 android:layout_marginRight="10pt"
                 android:background="@drawable/bg_menu"
-                android:foreground="@drawable/laki_laki"
+                android:foreground="@drawable/screening"
                 android:elevation="2pt"/>
 
         </RelativeLayout>
@@ -57,11 +57,11 @@
             android:layout_height="30pt"
             android:layout_below="@id/rl_top"
             android:layout_marginStart="10pt"
-            android:layout_marginTop="10pt"
+            android:layout_marginTop="23dp"
             android:layout_marginEnd="10pt"
             android:layout_marginBottom="10pt"
             android:background="@drawable/bg_biodata"
-            android:backgroundTint="@color/l"
+            android:backgroundTint="@color/orange"
             android:padding="3pt">
 
             <TextView
@@ -104,29 +104,783 @@
 
         </RelativeLayout>
 
-        <TextView
+        <ScrollView
             android:layout_below="@id/rl_gejala"
-            android:id="@+id/tv_gejala1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pilih Gejala"
-            android:layout_centerHorizontal="true"
-            android:textSize="10pt"/>
-
-        <LinearLayout
-            android:layout_below="@id/tv_gejala1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingVertical="10pt"
-            android:layout_marginBottom="30pt">
+            android:layout_marginBottom="40pt"
+            android:layout_marginHorizontal="10pt">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_gejala"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content">
 
-        </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_g01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1."
+                        android:textSize="7pt"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/tv_g01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Pernah mengalami mimpi basah/ keluarnya cairan sperma saat sedang tidur"/>
+
+                    <Button
+                        android:id="@+id/btn_gy01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g01"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g01"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_g02"
+                    android:layout_below="@id/rl_g01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2."
+                        android:textColor="@color/black"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/tv_g02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Muncul jerawat pada wajah"/>
+
+                    <Button
+                        android:id="@+id/btn_gy02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g02"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g02"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_g03"
+                    android:layout_below="@id/rl_g02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="3."
+                        android:textColor="@color/black"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/tv_g03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Tumbuh jakun dibagian leher"/>
+
+                    <Button
+                        android:id="@+id/btn_gy03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g03"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g03"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_g04"
+                    android:layout_below="@id/rl_g03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4."
+                        android:textColor="@color/black"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/tv_g04"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Suara berubah menjadi lebih berat"/>
+
+                    <Button
+                        android:id="@+id/btn_gy04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g04"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g04"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_g05"
+                    android:layout_below="@id/rl_g04"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="5."
+                        android:textColor="@color/black"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/tv_g05"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Tumbuh kumis dan janggut"/>
+
+                    <Button
+                        android:id="@+id/btn_gy05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g05"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g05"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_g06"
+                    android:layout_below="@id/rl_g05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="6."
+                        android:textColor="@color/black"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/tv_g06"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Tumbuh rambut-rambut halus pada ketiak"/>
+
+                    <Button
+                        android:id="@+id/btn_gy06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g06"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g06"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_g07"
+                    android:layout_below="@id/rl_g06"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="7."
+                        android:textColor="@color/black"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/tv_g07"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Mulai timbul bau badan"/>
+
+                    <Button
+                        android:id="@+id/btn_gy07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g07"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g07"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_g08"
+                    android:layout_below="@id/rl_g07"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="8."
+                        android:textColor="@color/black"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/tv_g08"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Dada mulai tampak bidang"/>
+
+                    <Button
+                        android:id="@+id/btn_gy08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g08"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g08"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_g09"
+                    android:layout_below="@id/rl_g08"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="9."
+                        android:textColor="@color/black"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/tv_g09"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Tumbuh rambut-rambut halus pada organ kelamin"/>
+
+                    <Button
+                        android:id="@+id/btn_gy09"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g09"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn09"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g09"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_g10"
+                    android:layout_below="@id/rl_g09"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10."
+                        android:textColor="@color/black"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/tv_g10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Organ kelamin membesar"/>
+
+                    <Button
+                        android:id="@+id/btn_gy10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g10"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g10"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_g11"
+                    android:layout_below="@id/rl_g10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="11."
+                        android:textColor="@color/black"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/tv_g11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Terjadi peningkatan tinggi bada"/>
+
+                    <Button
+                        android:id="@+id/btn_gy11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g11"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g11"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_g12"
+                    android:layout_below="@id/rl_g11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12."
+                        android:textColor="@color/black"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/tv_g12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Mulai tertarik dengan lawan jenis"/>
+
+                    <Button
+                        android:id="@+id/btn_gy12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g12"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g12"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_g13"
+                    android:layout_below="@id/rl_g12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="13."
+                        android:textColor="@color/black"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/tv_g13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Mudah mengekspresikan diri"/>
+
+                    <Button
+                        android:id="@+id/btn_gy13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g13"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g13"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_g14"
+                    android:layout_below="@id/rl_g13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="14."
+                        android:textColor="@color/black"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/tv_g14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Lebih sensitif terhadap perubahan fisik"/>
+
+                    <Button
+                        android:id="@+id/btn_gy14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g14"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g14"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_g15"
+                    android:layout_below="@id/rl_g14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="15."
+                        android:textColor="@color/black"
+                        android:textSize="7pt"/>
+
+                    <TextView
+                        android:id="@+id/tv_g15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10pt"
+                        android:textSize="7pt"
+                        android:textColor="@color/black"
+                        android:text="Cenderung bergaul dengan teman sebaya"/>
+
+                    <Button
+                        android:id="@+id/btn_gy15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g15"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5pt"
+                        android:text="Ya"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/hijau"/>
+
+                    <Button
+                        android:id="@+id/btn_gn15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_g15"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5pt"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/lightGrey"
+                        android:text="Tidak"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
 
         <Button
             android:id="@+id/btn_lanjut"

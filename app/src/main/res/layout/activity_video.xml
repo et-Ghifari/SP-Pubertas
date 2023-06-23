@@ -51,6 +51,21 @@
 
         </RelativeLayout>
 
+        <FrameLayout
+            android:layout_below="@id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_solid_5"
+            android:layout_margin="10pt">
+
+            <VideoView
+                android:id="@+id/vv_puber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </FrameLayout>
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

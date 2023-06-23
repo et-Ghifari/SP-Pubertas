@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -63,5 +64,14 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(database);
             }
         });
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        showToast("Silahkan tekan tombol HOME untuk keluar");
     }
 }

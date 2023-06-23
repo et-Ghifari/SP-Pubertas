@@ -17,7 +17,6 @@ public class DatabaseActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
     private List<String> list;
-    private AdapterAdmin adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +40,5 @@ public class DatabaseActivity extends AppCompatActivity {
 
         linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-
-        adapter = new AdapterAdmin(this, list);
-        recyclerView.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
     }
 }

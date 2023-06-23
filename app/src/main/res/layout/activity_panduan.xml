@@ -13,7 +13,7 @@
         <RelativeLayout
             android:id="@+id/rl_top"
             android:layout_width="match_parent"
-            android:layout_height="40pt"
+            android:layout_height="30pt"
             android:background="@color/lightGrey">
 
             <Button
@@ -21,7 +21,7 @@
                 android:layout_width="20pt"
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
-                android:layout_marginVertical="10pt"
+                android:layout_marginVertical="5pt"
                 android:layout_marginLeft="10pt"
                 android:background="@color/hilang"
                 android:foreground="@drawable/ic_baseline_arrow_circle_left"
@@ -43,13 +43,176 @@
                 android:layout_width="20pt"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
-                android:layout_marginVertical="10pt"
+                android:layout_marginVertical="5pt"
                 android:layout_marginRight="10pt"
                 android:background="@drawable/bg_menu"
                 android:foreground="@drawable/panduan"
                 android:elevation="2pt"/>
 
         </RelativeLayout>
+
+        <ScrollView
+            android:layout_below="@id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10pt">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_panduan1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10pt">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200pt"
+                        android:layout_marginLeft="10pt"
+                        android:layout_marginTop="10pt"
+                        android:background="@drawable/bg_panduan">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/panduan1" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="20pt"
+                        android:layout_height="20pt"
+                        android:background="@drawable/bg_menu"
+                        android:backgroundTint="@color/hijau"
+                        android:textAlignment="center"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:textSize="15pt">
+
+                    </TextView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_panduan2"
+                    android:layout_below="@id/rl_panduan1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10pt">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200pt"
+                        android:layout_marginLeft="10pt"
+                        android:layout_marginTop="10pt"
+                        android:background="@drawable/bg_panduan">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/panduan2" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="20pt"
+                        android:layout_height="20pt"
+                        android:background="@drawable/bg_menu"
+                        android:backgroundTint="@color/hijau"
+                        android:textAlignment="center"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:textSize="15pt">
+
+                    </TextView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_panduan3"
+                    android:layout_below="@id/rl_panduan2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10pt">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200pt"
+                        android:layout_marginLeft="10pt"
+                        android:layout_marginTop="10pt"
+                        android:background="@drawable/bg_panduan">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/panduan3"
+                            />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="20pt"
+                        android:layout_height="20pt"
+                        android:background="@drawable/bg_menu"
+                        android:backgroundTint="@color/hijau"
+                        android:textAlignment="center"
+                        android:text="3"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:textSize="15pt">
+
+                    </TextView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_panduan4"
+                    android:layout_below="@id/rl_panduan3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10pt">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="170pt"
+                        android:layout_marginLeft="10pt"
+                        android:layout_marginTop="10pt"
+                        android:background="@drawable/bg_panduan">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/panduan4"
+                            />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="20pt"
+                        android:layout_height="20pt"
+                        android:background="@drawable/bg_menu"
+                        android:backgroundTint="@color/hijau"
+                        android:textAlignment="center"
+                        android:text="4"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:textSize="15pt">
+
+                    </TextView>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
 
     </RelativeLayout>
 
